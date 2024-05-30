@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Cornucopias Fan Site</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -52,5 +53,60 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+=======
+    <title>Interactive Flowchart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="flowchart">
+    <div class="node" onclick="openModal('modal-soil-grade')">Soil Grade</div>
+    <div class="node" onclick="openModal('modal-farming-crops')">Farming Crops</div>
+    <div class="node" onclick="openModal('modal-farming-animals')">Farming Animals</div>
+</div>
+
+<div id="modal-soil-grade" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-soil-grade')">&times;</span>
+        <h2>Soil Grade</h2>
+        <p>The players will be able to grow and harvest crops on their land by planting seeds within the soil.</p>
+        <p>There are 5 grades of soil playable, with 1 being normal to 5 being the best. All land plots will start with a soil grade of 1.</p>
+        <p>The soil grade quality can be increased using fertilizer if it is less than the maximum soil grade of 5.</p>
+        <p>Each crop will have a (base) number of growth cycles which represents the time the crop takes from being planted to being ready to harvest. Each growth cycle represents 24 hours in the real-world. However, time in the Cornucopias Metaverse runs different to the real world and so we are representing growth in cycles to avoid any time confusions.</p>
+        <p>You can upgrade the soil grade of a land plot throughout the seasons if it is less than the maximum soil grade of 5.</p>
+        <p>If the crop is not watered regularly it will take longer to grow or even worse it may die. Sprinklers can be used to automatically water crops.</p>
+        <p>The grade of the soil may influence the growth speed of some crops. The base level for each crop represents the length of time it takes a crop to grow if planted on a farm with a soil grade of 1. If the soil grade is higher the crop may grow quicker as follows:</p>
+        <ul>
+            <li>Soil Grade 1 - the crop may grow at the same rate as stated by the crops base level.</li>
+            <li>Soil Grade 2 - the crop may grow faster than the crops at Soil Grade 1.</li>
+            <li>Soil Grade 3 - the crop may grow faster than the crops at Soil Grade 2.</li>
+            <li>Soil Grade 4 - the crop may grow faster than the crops at Soil Grade 3.</li>
+            <li>Soil Grade 5 - the crop may grow faster than the crops at Soil Grade 4.</li>
+        </ul>
+        <p>The grade of the soil may deteriorate over time if it is not maintained.</p>
+        <p>Some rarer crops will only be able to be grown on higher grades of soil.</p>
+        <p>There will be crops that can be grown every season and some that are only capable of being grown in 1 or more seasons. These will be clearly explained in the crop details page which will be added to the COPIWiki.</p>
+    </div>
+</div>
+
+<div id="modal-farming-crops" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-farming-crops')">&times;</span>
+        <h2>Farming Crops</h2>
+        <p>Details about farming crops...</p>
+    </div>
+</div>
+
+<div id="modal-farming-animals" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-farming-animals')">&times;</span>
+        <h2>Farming Animals</h2>
+        <p>Details about farming animals...</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+>>>>>>> 9b487e4e53a5edc3cbbd56b164f556b6fa937065
 </body>
 </html>
