@@ -4,33 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cornucopias Fan Site</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.10.0/dist/markmap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li onclick="loadMarkdown('markdown/chart1.md')">
-                        <img src="icons/icon1.png" alt="Icon 1">
-                        <span>Soil Grades</span>
-                    </li>
-                    <li onclick="loadMarkdown('markdown/chart2.md')">
-                        <img src="icons/icon2.png" alt="Icon 2">
-                        <span>Farming Crops</span>
-                    </li>
-                    <li onclick="loadMarkdown('markdown/chart3.md')">
-                        <img src="icons/icon3.png" alt="Icon 3">
-                        <span>Farming Animals</span>
-                    </li>
-                </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item" onclick="loadMarkdown('markdown/chart1.md')">
+                            <a class="nav-link active" href="#">
+                                <img src="icons/icon1.png" alt="Icon 1">
+                                Soil Grades
+                            </a>
+                        </li>
+                        <li class="nav-item" onclick="loadMarkdown('markdown/chart2.md')">
+                            <a class="nav-link" href="#">
+                                <img src="icons/icon2.png" alt="Icon 2">
+                                Farming Crops
+                            </a>
+                        </li>
+                        <li class="nav-item" onclick="loadMarkdown('markdown/chart3.md')">
+                            <a class="nav-link" href="#">
+                                <img src="icons/icon3.png" alt="Icon 3">
+                                Farming Animals
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog/blog.html">
+                                <img src="icons/icon-blog.png" alt="Blog Icon">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-        </aside>
-        <main class="content">
-            <div id="markmap-container"></div>
-        </main>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div id="markmap-container"></div>
+            </main>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
