@@ -1,36 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-main {
-    padding: 20px;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornucopias Fan Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.10.0/dist/markmap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li onclick="loadMarkdown('markdown/chart1.md')">
+                        <img src="icons/icon1.png" alt="Icon 1">
+                        <span>Soil Grades</span>
+                    </li>
+                    <li onclick="loadMarkdown('markdown/chart2.md')">
+                        <img src="icons/icon2.png" alt="Icon 2">
+                        <span>Farming Crops</span>
+                    </li>
+                    <li onclick="loadMarkdown('markdown/chart3.md')">
+                        <img src="icons/icon3.png" alt="Icon 3">
+                        <span>Farming Animals</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <div id="markmap-container"></div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
